@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+/* ──────────────────────────────────────────────
+   Design System: "The Digital Concierge"
+   Dapoli Tourism — Editorial Luxury Aesthetic
+   ────────────────────────────────────────────── */
+
+@theme inline {
+  /* ── Color Palette ── */
+  --color-primary: #000613;
+  --color-primary-container: #001f3f;
+  --color-primary-fixed: #d4e3ff;
+  --color-primary-fixed-dim: #afc8f0;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #6f88ad;
+  --color-on-primary-fixed: #001c3a;
+  --color-on-primary-fixed-variant: #2f486a;
+
+  --color-secondary: #4e5f7e;
+  --color-secondary-container: #cadaff;
+  --color-secondary-fixed: #d7e2ff;
+  --color-secondary-fixed-dim: #b6c7eb;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #4f5f7f;
+  --color-on-secondary-fixed: #081b38;
+  --color-on-secondary-fixed-variant: #374765;
+
+  --color-tertiary: #090500;
+  --color-tertiary-container: #2a1c00;
+  --color-tertiary-fixed: #ffdea5;
+  --color-tertiary-fixed-dim: #e9c176;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #a3813d;
+  --color-on-tertiary-fixed: #261900;
+  --color-on-tertiary-fixed-variant: #5d4201;
+
+  --color-surface: #f9f9f9;
+  --color-surface-bright: #f9f9f9;
+  --color-surface-dim: #dadada;
+  --color-surface-variant: #e2e2e2;
+  --color-surface-tint: #476083;
+  --color-surface-container: #eeeeee;
+  --color-surface-container-low: #f3f3f3;
+  --color-surface-container-high: #e8e8e8;
+  --color-surface-container-highest: #e2e2e2;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-surface: #1a1c1c;
+  --color-on-surface-variant: #43474e;
+  --color-background: #f9f9f9;
+  --color-on-background: #1a1c1c;
+
+  --color-outline: #74777f;
+  --color-outline-variant: #c4c6cf;
+
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #93000a;
+
+  --color-inverse-surface: #2f3131;
+  --color-inverse-on-surface: #f0f1f1;
+  --color-inverse-primary: #afc8f0;
+
+  /* ── Typography ── */
+  --font-headline: var(--font-jakarta), "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-body: var(--font-inter), "Inter", system-ui, sans-serif;
+  --font-label: var(--font-inter), "Inter", system-ui, sans-serif;
+
+  /* ── Border Radius ── */
+  --radius-DEFAULT: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+}
+
+/* ── Global Resets & Defaults ── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+  font-family: var(--font-body);
+}
+
+::selection {
+  background-color: var(--color-tertiary-fixed);
+  color: var(--color-on-tertiary-fixed);
+}
+
+/* ── Material Symbols Configuration ── */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+}
+
+/* ── Cinematic Gradient Overlay ── */
+.cinematic-gradient {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 6, 19, 0.15) 0%,
+    rgba(0, 6, 19, 0.75) 100%
+  );
+}
+
+/* ── No-Line Rule (no 1px borders for sectioning) ── */
+.no-line-rule {
+  border: none !important;
+}
+
+/* ── Tonal Shift on Scroll (nav transparency transition) ── */
+.tonal-shift-on-scroll {
+  transition: background-color 0.3s ease;
+}
+
+/* ── Ambient Shadows ── */
+.ambient-shadow {
+  box-shadow: 0 20px 40px rgba(26, 28, 28, 0.04);
+}
+
+/* ── Ghost Border (for inputs, subtle containment) ── */
+.ghost-border {
+  border: 1px solid rgba(196, 198, 207, 0.2);
+}
+
+/* ── Signature CTA Gradient ── */
+.cta-gradient {
+  background: linear-gradient(135deg, #000613 0%, #001f3f 100%);
+}

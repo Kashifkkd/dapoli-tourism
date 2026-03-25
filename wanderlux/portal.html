@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#261900",
+              "on-secondary-container": "#4f5f7f",
+              "on-primary-fixed": "#001c3a",
+              "surface-tint": "#476083",
+              "primary-container": "#001f3f",
+              "on-error": "#ffffff",
+              "tertiary-fixed": "#ffdea5",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-low": "#f3f3f3",
+              "on-primary": "#ffffff",
+              "background": "#f9f9f9",
+              "tertiary-fixed-dim": "#e9c176",
+              "surface-bright": "#f9f9f9",
+              "primary": "#000613",
+              "on-primary-container": "#6f88ad",
+              "on-secondary-fixed": "#081b38",
+              "primary-fixed": "#d4e3ff",
+              "secondary": "#4e5f7e",
+              "secondary-container": "#cadaff",
+              "outline-variant": "#c4c6cf",
+              "on-error-container": "#93000a",
+              "tertiary-container": "#2a1c00",
+              "inverse-on-surface": "#f0f1f1",
+              "inverse-primary": "#afc8f0",
+              "primary-fixed-dim": "#afc8f0",
+              "on-primary-fixed-variant": "#2f486a",
+              "inverse-surface": "#2f3131",
+              "surface": "#f9f9f9",
+              "secondary-fixed": "#d7e2ff",
+              "surface-variant": "#e2e2e2",
+              "outline": "#74777f",
+              "error-container": "#ffdad6",
+              "error": "#ba1a1a",
+              "surface-dim": "#dadada",
+              "on-secondary-fixed-variant": "#374765",
+              "surface-container-highest": "#e2e2e2",
+              "on-surface-variant": "#43474e",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-container": "#a3813d",
+              "surface-container": "#eeeeee",
+              "on-secondary": "#ffffff",
+              "secondary-fixed-dim": "#b6c7eb",
+              "on-tertiary-fixed-variant": "#5d4201",
+              "on-background": "#1a1c1c",
+              "surface-container-high": "#e8e8e8",
+              "on-surface": "#1a1c1c",
+              "tertiary": "#090500"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .cinematic-gradient {
+        background: linear-gradient(to bottom, rgba(0,6,19,0.2) 0%, rgba(0,6,19,0.8) 100%);
+      }
+      .no-line-rule { border: none !important; }
+      .tonal-shift-on-scroll { transition: background-color 0.3s ease; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-md dark:bg-slate-950/80 no-line-rule tonal-shift-on-scroll">
+<div class="flex justify-between items-center px-12 py-6 w-full max-w-screen-2xl mx-auto">
+<div class="text-2xl font-serif italic text-slate-900 dark:text-amber-200">WanderLux</div>
+<div class="hidden md:flex space-x-10 items-center">
+<a class="font-['Noto_Serif'] tracking-tight text-amber-600 dark:text-amber-200 border-b border-amber-600 text-sm" href="#">Destinations</a>
+<a class="font-['Noto_Serif'] tracking-tight text-slate-700 dark:text-slate-300 hover:text-amber-500 transition-colors duration-300 text-sm" href="#">Experiences</a>
+<a class="font-['Noto_Serif'] tracking-tight text-slate-700 dark:text-slate-300 hover:text-amber-500 transition-colors duration-300 text-sm" href="#">Journal</a>
+<a class="font-['Noto_Serif'] tracking-tight text-slate-700 dark:text-slate-300 hover:text-amber-500 transition-colors duration-300 text-sm" href="#">About</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="material-symbols-outlined text-on-background">search</button>
+<button class="material-symbols-outlined text-on-background">public</button>
+<button class="bg-primary text-on-primary px-6 py-2 text-xs font-label uppercase tracking-widest hover:bg-primary-container transition-colors duration-300">Book Now</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover scale-105" data-alt="Cinematic wide shot of a luxury tropical overwater villa at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg824dRVINFUqOnk77kdUjZpA65wiXEqwHXPBDnGKBP7Z9OdcjDjhr0GGXwt6BWoJf_PLEkQEwkdNTMj_fpo6iQAFIzFWKcCva1FFMhlJjMF3RvhV_Ix5K1-j6G8oqp_-24O1Arfq_T-dsQgNREnsr_yiH6PqXnT4bVkUbZueOQ0TKJKtSeZNvIHe96fd7uC-fmZYJzGVvinEo3mFXM4cAPhMQzV_iAhqtS-lq8I0wJqbuGepxQMpnmRh0EzkuX6n1840bUr9JjRI"/>
+<div class="absolute inset-0 cinematic-gradient"></div>
+</div>
+<div class="relative z-10 px-12 md:px-24 w-full max-w-screen-2xl mx-auto">
+<div class="max-w-3xl">
+<span class="text-tertiary-fixed font-label tracking-[0.3em] uppercase text-xs mb-6 block">The Art of Exploration</span>
+<h1 class="font-headline text-6xl md:text-8xl text-white leading-[1.1] mb-8 tracking-tighter italic">The World, Unveiled</h1>
+<p class="font-body text-lg md:text-xl text-white/80 mb-10 max-w-xl leading-relaxed">
+                        Curating profoundly intentional escapes for the modern voyager. Discover destinations where time stands still and every detail is a signature of excellence.
+                    </p>
+<div class="flex items-center space-x-8">
+<button class="bg-tertiary-fixed text-on-tertiary-fixed px-10 py-4 font-label uppercase tracking-widest text-sm hover:bg-tertiary-fixed-dim transition-all active:scale-95 duration-200">
+                            Explore Destinations
+                        </button>
+<button class="text-white font-label uppercase tracking-widest text-sm flex items-center group">
+                            Our Story <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+</button>
+</div>
+</div>
+</div>
+<div class="absolute bottom-12 left-12 flex items-center space-x-4 text-white/50 text-xs font-label tracking-widest">
+<span>01</span>
+<div class="w-20 h-[1px] bg-white/20 relative">
+<div class="absolute inset-0 bg-tertiary-fixed w-1/3"></div>
+</div>
+<span>04</span>
+</div>
+</section>
+<!-- Curated Collections (Bento Grid) -->
+<section class="py-32 px-12 bg-surface">
+<div class="max-w-screen-2xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-xl">
+<h2 class="font-headline text-5xl mb-6 text-primary">Curated Collections</h2>
+<p class="text-on-surface-variant leading-relaxed">A hand-picked selection of the world's most evocative stays, from the mist-covered peaks of Bhutan to the azure silence of the Mediterranean.</p>
+</div>
+<button class="text-primary font-label uppercase tracking-widest text-sm border-b border-primary/20 pb-1">View All Collections</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 h-[800px]">
+<div class="md:col-span-8 relative overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Luxury mountain retreat in the Alps during winter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT1Tts6IxTU2WBnbHQXJJBO4sOJl1GTmx2eG787XY2adug4sf6LNfA7dlunAuEDIlpnqGD25RxuC2J-k3qkeCb-1yN53zzkhPFwnkecBRoLe3zpw6lFxdxiCfYpGPOJBwtnawVQWkKUDy_2icS80xj6iFcByClRIz72KjjaGR_95LApLIuadFYXoJ9xU88vDB4Tnz3PlIcT7WgWibN9dhoDrCVPi6MZohcXF3HXqEtss9WWnd8Jf2dnxE9_nK3KSiMyBTEMzFVx5w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="absolute bottom-10 left-10 text-white">
+<span class="font-label text-xs uppercase tracking-widest opacity-80 mb-2 block">Mountain Escapes</span>
+<h3 class="font-headline text-3xl italic">The Alpine Sanctuary</h3>
+</div>
+</div>
+<div class="md:col-span-4 relative overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Crystal clear infinity pool overlooking the ocean" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATEiN8llh3xUDYl1Wjbu0FGvNImBOpEty7ChCmQ_fJbmkCzT6nnZrppTSdlTzo6-MQJRcmADnUiCa_IQqHrO9Cs46Wm_67CuHEBlTpybNM6F2hRBBE9L_co4Rk4T0AWmtgNv91oHCa3LwWiGTKUpQmOeAonLR62hmDh5WNxbx2Yudg-Zkdkwr0vM0WcyxMaQhxmuMZ6y3J9NBsiDdGYWTS3eDN3WzjGRASc5HPcRswm4j2iE6SuzRmOT3cjkLrqyuOvPs1cb3Jro8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="absolute bottom-10 left-10 text-white">
+<span class="font-label text-xs uppercase tracking-widest opacity-80 mb-2 block">Coastal Living</span>
+<h3 class="font-headline text-3xl italic">Azure Horizon</h3>
+</div>
+</div>
+<div class="md:col-span-4 relative overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Modern desert villa architecture at twilight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbpCjrF-Gp2bNyVX6YZOZj1z1OIsv1IkmrD2Mbdel5ZKxP3PHcZRLRyMdemC1fsrrOSMhwC4nnT4raATA63WsG1Kg6M1adHzeZkNl37ryjJkhGkRlDub8EhJxEp-XNO2Ab-5ibLNm5ixOHlEDZa7e_fdVMBuxmf8uFItNOWTgHFDvnSpXXLWW_ZTNSQ96QyAi8bdT_cL6A6BP3_aTuZJYVwgX_FhyCOGDjtjPXbAuVCtof6dnGdCy9bsgq92kzfVNGtrF71Z2nIDc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="absolute bottom-10 left-10 text-white">
+<span class="font-label text-xs uppercase tracking-widest opacity-80 mb-2 block">Desert Oasis</span>
+<h3 class="font-headline text-3xl italic">Nomad's Refinement</h3>
+</div>
+</div>
+<div class="md:col-span-8 relative overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Verdant jungle spa retreat in Southeast Asia" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBQ98RnKG11IQBLKwsvY_WCocVobozMyJ71hmUBttqmpq771jNMTbHWYtzRQ4a-7L0GZbHEIfRkSQ3U6HWAJL7vT_37NXUBAH7JLXEDogCwsQ1pkwcBdB2cQszorvKSgnYyDdrBG0o9h3NKW7oi2Q9yK5nOCdgk4QreIN5-F779s7hVfFlsC4n_vp409If7b0UUm39Apw33x6vFo-a-AXqFYFXed6mb2heTKaSDPWE-fCS3ndnPFmRj9pQ8qxkn0U_IShoLl0umGY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="absolute bottom-10 left-10 text-white">
+<span class="font-label text-xs uppercase tracking-widest opacity-80 mb-2 block">Tropical Jungles</span>
+<h3 class="font-headline text-3xl italic">Emerging Verdant</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bespoke Journeys (Asymmetric Section) -->
+<section class="py-32 bg-surface-container-low overflow-hidden">
+<div class="max-w-screen-2xl mx-auto px-12 flex flex-col md:flex-row items-center gap-20">
+<div class="w-full md:w-1/2 relative">
+<div class="aspect-[4/5] overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover" data-alt="Classic luxury travel trunk on a vintage train" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6chGP18X9TN8Yza26jHrb-XMAxO-Prl4i0NveW4wWaUJQ2B9dL63v5747DR9LmQtNvnFuSuM5tXRA5JjY2ST0Zei0hrXX8HQI9lwO_7l5KymEmMLW5yqOOTrucuYqQoYfy04F8YYN6OjRth1syp-NKde0GkrnpG0zcHKxVe_02dP6zAgjWp4lOxdU7Gq4_WO1ULC7WzW5sFiD57LyIUMe5JcVkdmlLx-IhwJ1zZ8EFONzjl9lys-gK_eTMJHIBKjToxQJp8JXfbE"/>
+</div>
+<div class="absolute -bottom-10 -right-10 w-64 h-80 hidden lg:block overflow-hidden rounded-lg shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="Handwritten letter and compass on a wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCqerZiL_LTiO3Xc2ghZi5XRv8C2_jbOxML0GLHalZLU9WdFAcY5UzBDzXPcr_Cmo9T3edvdFipQomQu96NIbDnHMZl68qkdq9CMTom229jp8Svus4G-o6X9t267AMynQyi4rqr6xYHOCgl4R2jhi01_7Pnd7Jyjr7O4COxERrLrVxx0JW_tTRfjx_s3VZX04gwI2ZUGyW6gTxhovOfZczbxzI62s_D9TE-Ij2POTWJDnv61ugWG0v_4iAlM6eldh5bAEE81smAPA"/>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<span class="text-tertiary-fixed-variant font-label tracking-widest uppercase text-xs mb-6 block">Personalized Travel</span>
+<h2 class="font-headline text-5xl mb-8 text-primary italic leading-tight">Bespoke Journeys Crafted for the Individual</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-10">
+                        No two souls seek the same horizon. Our concierge team specializes in architecting itineraries that align with your personal philosophy of travel. From private jet charters to exclusive access to heritage sites, your journey is limited only by imagination.
+                    </p>
+<ul class="space-y-6 mb-12">
+<li class="flex items-start space-x-4">
+<span class="material-symbols-outlined text-tertiary-fixed-variant mt-1">verified</span>
+<div>
+<h4 class="font-headline text-xl text-primary">Signature Concierge</h4>
+<p class="text-on-surface-variant text-sm">24/7 dedicated support throughout your entire voyage.</p>
+</div>
+</li>
+<li class="flex items-start space-x-4">
+<span class="material-symbols-outlined text-tertiary-fixed-variant mt-1">auto_awesome</span>
+<div>
+<h4 class="font-headline text-xl text-primary">Hidden Gems Access</h4>
+<p class="text-on-surface-variant text-sm">Exclusive entry to locations closed to the general public.</p>
+</div>
+</li>
+</ul>
+<button class="bg-primary text-on-primary px-10 py-4 font-label uppercase tracking-widest text-sm hover:bg-primary-container transition-all">
+                        Begin Your Itinerary
+                    </button>
+</div>
+</div>
+</section>
+<!-- Journal Section -->
+<section class="py-32 px-12 bg-white">
+<div class="max-w-screen-2xl mx-auto text-center mb-20">
+<span class="text-tertiary-fixed-variant font-label tracking-widest uppercase text-xs mb-4 block">The Journal</span>
+<h2 class="font-headline text-5xl text-primary">Stories from the Road</h2>
+</div>
+<div class="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Journal Entry 1 -->
+<article class="group cursor-pointer">
+<div class="aspect-[16/10] mb-8 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Misty morning in the Italian Dolomites" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFdGeDs32WYQKLG5xIRY2qsVKwJ5injdvoTP3IgC0Tgf0KaUmFpbIh1YMCfQ8tALY5A2_jUwQgksNRMESAcGxt8XWSMzpyvgqIBHoJfpBPPr3xHYcPHtLw3punX_jHM-bf3Qx3JQRM-bnDMKWYx1Wg1q0x4oNQ1bJCakfr5FXPiVESqR1hB5w2xYbO2TN-3FWoamHQMsUsJ4Wx26lXwe7udZOKsj3XfaeeGmwxx-YkludT26DolHdumurcpv4LDENKcu_SrJ7EAtA"/>
+</div>
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mb-3 block">Edition 42 • Italy</span>
+<h3 class="font-headline text-2xl mb-4 group-hover:text-amber-800 transition-colors">Finding Stillness in the Dolomites</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Explore the quiet majesty of high-altitude living where the clouds meet the limestone peaks.</p>
+<span class="text-xs font-label uppercase tracking-widest border-b border-primary/10 pb-1 group-hover:border-tertiary-fixed-variant transition-colors">Read Story</span>
+</article>
+<!-- Journal Entry 2 -->
+<article class="group cursor-pointer">
+<div class="aspect-[16/10] mb-8 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="The Taj Mahal reflecting in water at sunrise" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy_-HWhRiBQ4QFEo4ZFy5pxoFLIDY8GOwiBNWraoXYaGKKHDS9n-xZvNocfeRtMuttTeGdhD1Ei8Dv1Zc389xUNtM_A9HX1rkt9vzwRGMtV9mICb5BT6DyZZksJaCy_v9aaChP5jLTWI0_Or0iu8HjCOziD2VqQKZhEEl0nNKC_-suMgUIKTn6dvM7KUdjL3TU6RgP4fKxw_qbYP6x1gkxVHH6ObfkecS-Ug8PicCExk6pQFLx9tdwJuRJ30IV9pLMhOIa-PhLR5Q"/>
+</div>
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mb-3 block">Edition 41 • India</span>
+<h3 class="font-headline text-2xl mb-4 group-hover:text-amber-800 transition-colors">A Journey Through Rajasthan's Heritage</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">A chronicle of vibrant colors, ancient forts, and the timeless elegance of Jaipur’s palaces.</p>
+<span class="text-xs font-label uppercase tracking-widest border-b border-primary/10 pb-1 group-hover:border-tertiary-fixed-variant transition-colors">Read Story</span>
+</article>
+<!-- Journal Entry 3 -->
+<article class="group cursor-pointer">
+<div class="aspect-[16/10] mb-8 overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Aerial view of a secluded white sand beach" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUomBlTtWLkoBCgsUsnFh3uRxh3Jou-h3QnFu4jH2-hqRk1HeGauCebZF6gWtXcAQsVYPYu5fky0FX8wiNngQDYoxgxjUFCNBap6_nztrDIl0dMyALMIkK3rCpJkyT31CRVeu4Ep7RTLexdWs4P9ps0Pq_8W3bRIRZZITxG7GjpDIpf_Ttb3S0XE2VDG4a-G6iwVcgVrSNo6kv3xahIsAgUYRO4cgTsIbA9Sgd9F1LwwYvsX2D6GW3sf-5kJ9imHnYh5YcPQa5X4o"/>
+</div>
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant mb-3 block">Edition 40 • French Polynesia</span>
+<h3 class="font-headline text-2xl mb-4 group-hover:text-amber-800 transition-colors">Solitude in the South Pacific</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Discover the islands where isolation is the ultimate luxury and nature remains untouched.</p>
+<span class="text-xs font-label uppercase tracking-widest border-b border-primary/10 pb-1 group-hover:border-tertiary-fixed-variant transition-colors">Read Story</span>
+</article>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="py-32 bg-primary text-white text-center px-6">
+<div class="max-w-2xl mx-auto">
+<h2 class="font-headline text-4xl mb-8 italic">Stay Inspired</h2>
+<p class="text-white/60 mb-12 font-body">Join our private circle of travelers to receive curated stories and early access to bespoke seasonal itineraries.</p>
+<form class="flex flex-col md:flex-row gap-4 items-stretch justify-center">
+<input class="bg-transparent border-b border-white/20 focus:border-tertiary-fixed text-center md:text-left px-4 py-4 w-full md:w-80 font-body outline-none transition-colors" placeholder="Email Address" type="email"/>
+<button class="bg-tertiary-fixed text-on-tertiary-fixed px-12 py-4 font-label uppercase tracking-widest text-sm hover:bg-tertiary-fixed-dim transition-all">Subscribe</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-20 px-12 bg-slate-950 dark:bg-black no-line-rule">
+<div class="flex flex-col md:flex-row justify-between items-start w-full border-t border-slate-800 pt-20 max-w-screen-2xl mx-auto">
+<div class="mb-12 md:mb-0">
+<span class="text-3xl font-serif text-amber-200 mb-8 block">WanderLux</span>
+<p class="text-slate-400 max-w-xs mb-8 font-body normal-case">Architects of high-end travel and immersive cultural experiences worldwide.</p>
+<div class="flex space-x-6">
+<a class="text-slate-400 hover:text-white transition-opacity" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a>
+<a class="text-slate-400 hover:text-white transition-opacity" href="#"><span class="material-symbols-outlined">camera</span></a>
+<a class="text-slate-400 hover:text-white transition-opacity" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-16">
+<div>
+<h5 class="text-slate-50 font-['Manrope'] text-sm tracking-wide uppercase mb-8">Navigation</h5>
+<ul class="space-y-4">
+<li><a class="text-slate-400 hover:text-white transition-opacity font-['Manrope'] text-sm uppercase" href="#">Destinations</a></li>
+<li><a class="text-slate-400 hover:text-white transition-opacity font-['Manrope'] text-sm uppercase" href="#">Experiences</a></li>
+<li><a class="text-slate-400 hover:text-white transition-opacity font-['Manrope'] text-sm uppercase" href="#">Journal</a></li>
+<li><a class="text-slate-400 hover:text-white transition-opacity font-['Manrope'] text-sm uppercase" href="#">About</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-slate-50 font-['Manrope'] text-sm tracking-wide uppercase mb-8">Legal</h5>
+<ul class="space-y-4">
+<li><a class="text-slate-400 hover:text-white transition-opacity font-['Manrope'] text-sm uppercase" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-400 hover:text-white transition-opacity font-['Manrope'] text-sm uppercase" href="#">Terms of Service</a></li>
+<li><a class="text-slate-400 hover:text-white transition-opacity font-['Manrope'] text-sm uppercase" href="#">Sustainability</a></li>
+<li><a class="text-slate-400 hover:text-white transition-opacity font-['Manrope'] text-sm uppercase" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="col-span-2 md:col-span-1">
+<h5 class="text-slate-50 font-['Manrope'] text-sm tracking-wide uppercase mb-8">Headquarters</h5>
+<p class="text-slate-400 font-['Manrope'] text-sm uppercase leading-loose">
+                        Rue du Rhône 12,<br/>
+                        1204 Genève,<br/>
+                        Switzerland
+                    </p>
+</div>
+</div>
+</div>
+<div class="mt-20 pt-8 border-t border-slate-900 flex justify-between items-center w-full max-w-screen-2xl mx-auto">
+<p class="text-slate-400 font-['Manrope'] text-xs tracking-wide uppercase">© 2024 WanderLux Editorial Excellence. All rights reserved.</p>
+<p class="text-slate-600 font-['Manrope'] text-[10px] tracking-widest uppercase">Designed for Excellence</p>
+</div>
+</footer>
+</body></html>
