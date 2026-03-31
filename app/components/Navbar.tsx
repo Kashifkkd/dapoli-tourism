@@ -93,11 +93,13 @@ export default function Navbar() {
           {/* Mobile hamburger */}
           <button
             id="nav-mobile-toggle"
-            className="md:hidden material-symbols-outlined text-white transition-colors duration-300"
+            className="md:hidden text-white transition-colors duration-300"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle navigation menu"
           >
-            {isMobileMenuOpen ? "close" : "menu"}
+            <span className="material-symbols-outlined">
+              {isMobileMenuOpen ? "close" : "menu"}
+            </span>
           </button>
         </div>
       </div>

@@ -156,7 +156,7 @@ export default function HeroSection() {
 
       {/* Content */}
       <div
-        className="relative w-full px-6 md:px-20 max-w-screen-xl mx-auto"
+        className="relative w-full px-6 md:px-20 max-w-screen-xl mx-auto flex flex-col items-center text-center"
         style={{ zIndex: 10 }}
       >
         {/* Tagline */}
@@ -193,7 +193,7 @@ export default function HeroSection() {
 
         {/* Subtitle — fade in after title appears */}
         <p
-          className="font-body text-base sm:text-lg md:text-xl mb-10 max-w-2xl leading-relaxed"
+          className="font-body text-base sm:text-lg md:text-xl mb-10 max-w-2xl leading-relaxed mx-auto"
           key={`sub-${textKey}`}
           style={{
             color: "rgba(245,240,232,0.78)",
@@ -207,7 +207,7 @@ export default function HeroSection() {
 
         {/* CTAs */}
         <div
-          className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
           style={{
             opacity: isLoaded ? 1 : 0,
             transition: "opacity 800ms ease-out 1100ms",

@@ -145,13 +145,13 @@ export default function DealsSection() {
             <SpotlightCard
               key={id}
               spotlightColor="rgba(255,222,165,0.14)"
-              className="flex flex-col group"
+              className="flex flex-col group h-full"
               style={revealStyle(gridVisible, index * 90) as React.CSSProperties}
             >
               <Link
                 href="/deals"
                 id={`deal-card-${id}`}
-                className="flex flex-col flex-1 bg-white overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-500"
+                className="flex flex-col h-full flex-1 bg-white overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-500"
               >
                 {/* ── Hero Image ─── */}
                 <div className="relative h-52 overflow-hidden flex-shrink-0">
@@ -215,66 +215,68 @@ export default function DealsSection() {
                     {title}
                   </h3>
 
-                  {/* Description */}
-                  <p className="text-on-surface-variant text-xs leading-relaxed mb-4 flex-1 line-clamp-3">
-                    {description}
-                  </p>
+                  {/* Description flex-1 to push everything below it down */}
+                  <div className="flex flex-col flex-1">
+                    <p className="text-on-surface-variant text-xs leading-relaxed mb-4 flex-1">
+                      {description}
+                    </p>
 
-                  {/* Highlight pills */}
-                  <div className="flex flex-wrap gap-1.5 mb-5">
-                    {highlights.map((h) => (
-                      <span
-                        key={h}
-                        className="text-[10px] font-label px-2 py-0.5 text-on-surface-variant"
-                        style={{ background: "#f3f3f3", border: "1px solid rgba(0,6,19,0.07)" }}
-                      >
-                        {h}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* ── Pricing + CTA ─── */}
-                  <div
-                    className="pt-4"
-                    style={{ borderTop: "1px solid rgba(0,6,19,0.06)" }}
-                  >
-                    <div className="flex items-end justify-between mb-3">
-                      <div>
-                        <span className="text-on-surface-variant line-through text-xs font-label">
-                          {originalPrice}
+                    {/* Highlight pills */}
+                    <div className="flex flex-wrap gap-1.5 mb-5 mt-auto">
+                      {highlights.map((h) => (
+                        <span
+                          key={h}
+                          className="text-[10px] font-label px-2 py-0.5 text-on-surface-variant"
+                          style={{ background: "#f3f3f3", border: "1px solid rgba(0,6,19,0.07)" }}
+                        >
+                          {h}
                         </span>
-                        <div className="flex items-baseline gap-2">
-                          <span className="font-headline font-bold text-xl text-primary">
-                            {discountedPrice}
-                          </span>
-                          <span
-                            className="text-[10px] font-label font-black px-1.5 py-0.5"
-                            style={{ background: "#e8f5e9", color: "#2a7a45" }}
-                          >
-                            {discount}
-                          </span>
-                        </div>
-                        <span className="text-[10px] text-on-surface-variant font-label">
-                          per person
-                        </span>
-                      </div>
-                      <div className="text-right">
-                        <div className="text-[10px] font-label text-on-surface-variant mb-0.5">via</div>
-                        <div className="font-label font-bold text-xs text-primary">{partner}</div>
-                      </div>
+                      ))}
                     </div>
 
+                    {/* ── Pricing + CTA ─── */}
                     <div
-                      className="flex items-center justify-center gap-2 py-3 text-xs font-label font-bold uppercase tracking-widest transition-all duration-300 group-hover:gap-3"
-                      style={{
-                        background: "linear-gradient(135deg, #000613 0%, #001f3f 100%)",
-                        color: "#ffdea5",
-                      }}
+                      className="pt-4"
+                      style={{ borderTop: "1px solid rgba(0,6,19,0.06)" }}
                     >
-                      Book Now
-                      <span className="material-symbols-outlined text-sm group-hover:translate-x-0.5 transition-transform duration-300">
-                        arrow_right_alt
-                      </span>
+                      <div className="flex items-end justify-between mb-3">
+                        <div>
+                          <span className="text-on-surface-variant line-through text-xs font-label">
+                            {originalPrice}
+                          </span>
+                          <div className="flex items-baseline gap-2">
+                            <span className="font-headline font-bold text-xl text-primary">
+                              {discountedPrice}
+                            </span>
+                            <span
+                              className="text-[10px] font-label font-black px-1.5 py-0.5"
+                              style={{ background: "#e8f5e9", color: "#2a7a45" }}
+                            >
+                              {discount}
+                            </span>
+                          </div>
+                          <span className="text-[10px] text-on-surface-variant font-label">
+                            per person
+                          </span>
+                        </div>
+                        <div className="text-right flex flex-col justify-end">
+                          <div className="text-[10px] font-label text-on-surface-variant mb-0.5">via</div>
+                          <div className="font-label font-bold text-xs text-primary leading-tight">{partner}</div>
+                        </div>
+                      </div>
+
+                      <div
+                        className="flex items-center justify-center gap-2 py-3 text-xs font-label font-bold uppercase tracking-widest transition-all duration-300 group-hover:gap-3"
+                        style={{
+                          background: "linear-gradient(135deg, #000613 0%, #001f3f 100%)",
+                          color: "#ffdea5",
+                        }}
+                      >
+                        Book Now
+                        <span className="material-symbols-outlined text-sm group-hover:translate-x-0.5 transition-transform duration-300">
+                          arrow_right_alt
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
